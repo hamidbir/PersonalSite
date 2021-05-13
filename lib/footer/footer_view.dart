@@ -57,7 +57,7 @@ class FooterMobileView extends StatelessWidget {
                   decoration: TextDecoration.underline,
                   color: Colors.redAccent),
             ),
-            onTap: () => launch('https://github.com'),
+            onTap: () => launch('https://github.com/hamidbir/PersonalSite'),
           ),
         ],
       ),
@@ -90,7 +90,7 @@ class FooterDesktopView extends StatelessWidget {
                   decoration: TextDecoration.underline,
                   color: Colors.redAccent),
             ),
-            onTap: () => launch('https://github.com'),
+            onTap: () => launch('https://github.com/hamidbir/PersonalSite'),
           ),
           Spacer(),
           for (final social in socials)

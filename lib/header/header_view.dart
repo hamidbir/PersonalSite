@@ -1,5 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:site_demo/Anim/screens/cat_anim.dart';
 import 'package:site_demo/components/mobile_desktop_view_builder.dart';
 import 'package:site_demo/constants.dart';
 import 'package:site_demo/header/header_body.dart';
@@ -42,21 +43,30 @@ class _HeaderDesktopViewState extends State<HeaderDesktopView> {
               child: HeaderBody(),
             ),
             Expanded(
-              child: InkWell(
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                onTap: () {
-                  _animateTo("Hello");
-                },
-                child: FlareActor(
-                  'images/main7.flr',
-                  animation: currentAnimation,
-                  callback: (string) {
-                    isAnimating = true;
-                  },
-                ),
+              child: Stack(
+                children: [
+                  InkWell(
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    onTap: () {
+                      _animateTo("Hello");
+                    },
+                    child: FlareActor(
+                      'images/main7.flr',
+                      animation: currentAnimation,
+                      callback: (string) {
+                        isAnimating = true;
+                      },
+                    ),
+                  ),
+                  Positioned(
+                      right: 0,
+                      bottom: 65,
+                      child: Container(
+                          width: 100, height: 100, child: CatAnimation())),
+                ],
               ),
             ),
           ],
@@ -108,21 +118,32 @@ class _HeaderViewMobileState extends State<HeaderViewMobile> {
       child: Column(
         children: [
           Expanded(
-            child: InkWell(
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              onTap: () {
-                _animateTo("Hello");
-              },
-              child: FlareActor(
-                'images/main7.flr',
-                animation: currentAnimation,
-                callback: (string) {
-                  isAnimating = true;
-                },
-              ),
+            child: Stack(
+              children: [
+                InkWell(
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () {
+                    _animateTo("Hello");
+                  },
+                  child: FlareActor(
+                    'images/main7.flr',
+                    animation: currentAnimation,
+                    callback: (string) {
+                      isAnimating = true;
+                    },
+                  ),
+                ),
+                Positioned(
+                    right: 45,
+                    bottom: 0,
+                    child: Container(
+                        width: 50,
+                        height: 50,
+                        child: CatAnimation(isMobile: true))),
+              ],
             ),
           ),
           HeaderBody(
