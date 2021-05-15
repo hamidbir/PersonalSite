@@ -10,15 +10,18 @@ import 'package:site_demo/project/project_view.dart';
 import 'package:site_demo/skills/skills_view.dart';
 import 'package:site_demo/header/header_view.dart';
 
+//! Home view include all of item in site such as Navigation bar, Project view and so on!
 class HomeView extends StatefulWidget {
   @override
   _HomeViewState createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> with AfterLayoutMixin {
+  //* Keys to different parts of the personal site
   final projectKey = GlobalKey();
   final skillsKey = GlobalKey();
   final experienceKey = GlobalKey();
+  //* ScrollController with initialScrollOffset = 0
   final ScrollController scrollController =
       ScrollController(initialScrollOffset: 0);
 
@@ -38,7 +41,7 @@ class _HomeViewState extends State<HomeView> with AfterLayoutMixin {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-
+    //* Implement inheritance from a segment for cascading controller availability in the segments
     return MultiProvider(
       providers: [
         ProxyProvider0<List<NavigationItem>>(
@@ -75,6 +78,7 @@ class _HomeViewState extends State<HomeView> with AfterLayoutMixin {
   }
 }
 
+//! Function Find the beginning of each section to set buttons to automatically scroll to that section
 _getPosition(GlobalKey key) {
   final RenderBox rb = key.currentContext.findRenderObject();
   final position = rb.localToGlobal(Offset.zero);

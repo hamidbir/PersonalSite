@@ -21,18 +21,20 @@ class ProjectItem {
 final kProjectItems = [
   ProjectItem(
       image: 'images/p1.png',
-      title: 'Agricalcure App',
-      description: 'This app is good and save your money and save it anad...',
+      title: 'Agriculture App',
+      description:
+          'This program will help you to introduce the types of plants, trees and how to score it',
       technologies: ['Flutter', 'Firebase']),
   ProjectItem(
       image: 'images/p2.png',
-      title: 'Tch App',
-      description: 'This app is good and save your money and save it anad...',
+      title: 'Teach App',
+      description:
+          'The training program is about mental illness, trauma and treatment',
       technologies: ['Flutter']),
   ProjectItem(
       image: 'images/p3.png',
-      title: 'Bu App',
-      description: 'This app is good and save your money and save it anad...',
+      title: 'Business App',
+      description: 'This app is good and can save your money',
       technologies: ['Flutter', 'UI']),
 ];
 

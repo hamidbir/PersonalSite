@@ -71,27 +71,35 @@ class ExperienceInfo {
 
 final experinceList = [
   ExperienceInfo(
-      company: 'Google',
+      company: 'DigiKala',
       timeLine: 'June 2019- April 2021',
-      description: ['- Very Nice', '- very Deificullt', '- very Money']),
-  ExperienceInfo(
-      company: 'FaceBook',
-      timeLine: 'March 2018 - April 2018 ',
-      description: ['- not to bad', '- Not security', '- pretty Good']),
-  ExperienceInfo(
-      company: 'Amazon',
-      timeLine: ' April 2018 - April 2019 ',
       description: [
-        '- inf or mation fjsadlfja sadf',
-        '- very quiet',
-        '- Nice'
+        '- Very Nice',
+        '- It was good as a work experience in a large environment. But you have to be a strong programmer to grow in this environment',
+        '- very Money'
       ]),
   ExperienceInfo(
-      company: 'MicroSoft',
+      company: 'Viranika',
+      timeLine: 'March 2018 - April 2018 ',
+      description: [
+        '- not to bad',
+        '- Not security',
+        '- First work experience in an office and team work environment.'
+      ]),
+  ExperienceInfo(
+      company: 'Bazar',
+      timeLine: ' April 2018 - April 2019 ',
+      description: [
+        '- Having a fresh environment for work. motivating',
+        '- very quiet',
+        '- Teamwork, having different people in the workplace and having enough mastery to stay in the company'
+      ]),
+  ExperienceInfo(
+      company: 'Google',
       timeLine: 'April 2019 - June 2019 ',
       description: [
-        '- description afwa erawe ryrt art art ytu ui  tr fhs et  s',
-        '- wer sfer  aewt gty t fghtry hgfh',
-        '- eraa'
+        '- Great working environment, long working hours',
+        '- Hard and tedious projects, so having enough knowledge to do the project is necessary and useful',
+        '- USA'
       ]),
 ];

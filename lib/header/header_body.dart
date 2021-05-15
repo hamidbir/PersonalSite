@@ -28,7 +28,7 @@ class HeaderBody extends StatelessWidget {
           height: isMobile ?? false ? 15 : 30,
         ),
         AutoSizeText(
-            'I have 2 years of experianse in flutter developmant in buildubg Butifull apps.',
+            'I have 2 years of experience in flutter development in building Beautiful apps for android and IOS.',
             maxLines: 3,
             style: TextStyle(
               fontSize: 17,
