@@ -3,10 +3,10 @@ import 'package:site_demo/experience/experience_contanier.dart';
 import 'package:webfeed/domain/rss_item.dart';
 
 class BlogCard extends StatelessWidget {
-  final bool isMobile;
-  final RssItem article;
+  final bool? isMobile;
+  final RssItem? article;
   const BlogCard({
-    Key key,
+    Key? key,
     this.isMobile,
     this.article,
   }) : super(key: key);
@@ -27,8 +27,8 @@ class BlogCard extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: 8, vertical: isMobile ?? false ? 20 : 40),
               child: Text(
-                article.title,
-                style: Theme.of(context).textTheme.headline4.copyWith(
+                article!.title!,
+                style: Theme.of(context).textTheme.headline4!.copyWith(
                       color: Colors.white,
                     ),
               ),
@@ -39,11 +39,11 @@ class BlogCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    article.pubDate.toString(),
+                    article!.pubDate.toString(),
                     style: textStyle(isGrey: true),
                   ),
                   Text(
-                    article.content.value,
+                    article!.content!.value,
                     maxLines: 3,
                     style: textStyle(),
                   ),

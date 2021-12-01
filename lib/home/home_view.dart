@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> with AfterLayoutMixin {
 
 //! Function Find the beginning of each section to set buttons to automatically scroll to that section
 _getPosition(GlobalKey key) {
-  final RenderBox rb = key.currentContext.findRenderObject();
+  final RenderBox rb = key.currentContext!.findRenderObject() as RenderBox;
   final position = rb.localToGlobal(Offset.zero);
   final scrollOffset = position.dy;
   return scrollOffset;
@@ -88,10 +88,10 @@ _getPosition(GlobalKey key) {
 
 class NavigationItem {
   final String text;
-  final Icon icon;
+  final Icon? icon;
   final GlobalKey key;
 
-  NavigationItem(this.text, {this.icon, @required this.key});
+  NavigationItem(this.text, {this.icon, required this.key});
   double get position => _getPosition(key);
 }
 

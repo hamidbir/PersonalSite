@@ -1,10 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:site_demo/project/project_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectItemBody extends StatelessWidget {
   const ProjectItemBody({
-    Key key,
-    @required this.item,
+    Key? key,
+    required this.item,
   }) : super(key: key);
 
   final ProjectItem item;
@@ -14,7 +16,13 @@ class ProjectItemBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(item.image),
+        SizedBox(
+            width: 300,
+            height: 200,
+            child: Image.asset(
+              item.image,
+              fit: BoxFit.fill,
+            )),
         SizedBox(
           height: 15,
         ),
@@ -29,6 +37,20 @@ class ProjectItemBody extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
+        item.link == 'nolink'
+            ? SizedBox()
+            : InkWell(
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                splashColor: Colors.transparent,
+                child: Text('Link',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold)),
+                onTap: () {
+                  launch(item.link);
+                }),
         Row(
           children: [
             for (final tech in item.technologies)

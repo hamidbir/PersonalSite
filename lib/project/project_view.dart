@@ -8,39 +8,44 @@ class ProjectItem {
   final String image;
   final String title;
   final String description;
+  final String link;
   final List<String> technologies;
 
   ProjectItem({
-    @required this.image,
-    @required this.title,
-    @required this.description,
-    @required this.technologies,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.link,
+    required this.technologies,
   });
 }
 
 final kProjectItems = [
   ProjectItem(
       image: 'images/p1.png',
-      title: 'Agriculture App',
+      title: 'Milipede shoe store',
       description:
-          'This program will help you to introduce the types of plants, trees and how to score it',
-      technologies: ['Flutter', 'Firebase']),
+          'This site is designed with Flutter Framework version (2.5.1) and GetX architecture. In the construction of this store, the features of ​​Firebase (authentication, Firestore, Firestorage) has been used.',
+      link: 'https://github.com/hamidbir/Shopping',
+      technologies: ['Flutter', 'Firebase', 'GetX']),
   ProjectItem(
-      image: 'images/p2.png',
-      title: 'Teach App',
-      description:
-          'The training program is about mental illness, trauma and treatment',
-      technologies: ['Flutter']),
+      image: 'images/p2.jpg',
+      title: 'Nike web',
+      description: 'This is a simple website design',
+      link: 'https://github.com/hamidbir/Nike-web',
+      technologies: ['Flutter-web', 'UI']),
   ProjectItem(
       image: 'images/p3.png',
-      title: 'Business App',
-      description: 'This app is good and can save your money',
+      title: 'Sweet shop app',
+      link: 'nolink',
+      description:
+          "This was my final bachelor's project, which includes various parts such as authentication, selection of sweets, different categories, and so on.",
       technologies: ['Flutter', 'UI']),
 ];
 
 class ProjectView extends StatelessWidget {
   const ProjectView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Projects';
   @override

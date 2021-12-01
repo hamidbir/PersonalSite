@@ -6,7 +6,7 @@ import 'package:site_demo/experience/experience_contanier.dart';
 
 class ExperienceView extends StatelessWidget {
   const ExperienceView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Experience';
   @override

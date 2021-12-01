@@ -15,7 +15,7 @@ class NavigationBarView extends StatelessWidget {
 
 class NavigationDesktopView extends StatelessWidget {
   const NavigationDesktopView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -49,7 +49,7 @@ class NavigationDesktopView extends StatelessWidget {
 
 class NavigationMobileView extends StatelessWidget {
   const NavigationMobileView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -77,9 +77,9 @@ class NavigationMobileView extends StatelessWidget {
 
 class NavigationBarItem extends StatelessWidget {
   const NavigationBarItem({
-    Key key,
-    @required this.onPressed,
-    @required this.data,
+    Key? key,
+    required this.onPressed,
+    required this.data,
   }) : super(key: key);
 
   final void Function() onPressed;

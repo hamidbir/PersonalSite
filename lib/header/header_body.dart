@@ -1,10 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HeaderBody extends StatelessWidget {
-  final bool isMobile;
+  final bool? isMobile;
   const HeaderBody({
-    Key key,
+    Key? key,
     this.isMobile,
   }) : super(key: key);
 
@@ -41,12 +42,14 @@ class HeaderBody extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(7)),
             ),
             color: Colors.redAccent,
-            onPressed: () {},
+            onPressed: () {
+              launch('https://www.linkedin.com/in/hamid-ravanbod/');
+            },
             child: Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: isMobile ?? false ? 8 : 15,
                   vertical: isMobile ?? false ? 10 : 17),
-              child: Text('contact us ',
+              child: Text('contact me',
                   style: TextStyle(
                       fontSize: isMobile ?? false ? 10 : 17,
                       color: Colors.white)),

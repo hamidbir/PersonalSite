@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
       title: 'Hamid Ravanbod ',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: TextTheme(
-          headline2: GoogleFonts.montserrat(color: Colors.black),
-          headline4: GoogleFonts.montserrat(color: Colors.black, fontSize: 30),
-        ),
-      ),
+          primarySwatch: Colors.blue,
+          textTheme: TextTheme(
+            headline2: TextStyle(color: Colors.black, fontFamily: 'bradly'),
+            headline4: TextStyle(
+                color: Colors.black, fontFamily: 'comic', fontSize: 30),
+          ),
+          fontFamily: 'comic'),
       home: HomeView(),
     );
   }

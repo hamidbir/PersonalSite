@@ -6,7 +6,7 @@ class DesktopViewBuilder extends StatelessWidget {
   final List<Widget> children;
 
   const DesktopViewBuilder(
-      {Key key, @required this.titleText, @required this.children})
+      {Key? key, required this.titleText, required this.children})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

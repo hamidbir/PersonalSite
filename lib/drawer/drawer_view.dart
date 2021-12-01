@@ -13,7 +13,7 @@ class DrawerView extends StatelessWidget {
 
 class DrawerMobileView extends StatelessWidget {
   const DrawerMobileView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -25,7 +25,7 @@ class DrawerMobileView extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            child: Text('Hamid Raavnbod'),
+            child: Text('Hamid Ravnbod'),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [

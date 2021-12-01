@@ -4,19 +4,19 @@ import 'package:site_demo/utils/color_assets.dart';
 
 class OutlinedSkillContanier extends StatelessWidget {
   const OutlinedSkillContanier({
-    Key key,
-    @required this.index,
+    Key? key,
+    required this.index,
     this.rowIndex,
     this.isMobile,
   }) : super(key: key);
 
   final int index;
-  final int rowIndex;
-  final bool isMobile;
+  final int? rowIndex;
+  final bool? isMobile;
 
   @override
   Widget build(BuildContext context) {
-    final parsedIndex = isMobile ?? false ? index : (index * 2) + rowIndex;
+    final parsedIndex = isMobile ?? false ? index : (index * 2) + rowIndex!;
     final colors = ColorAssets.all;
     return Container(
       width: isMobile ?? false ? double.infinity : null,

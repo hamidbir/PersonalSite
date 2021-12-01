@@ -3,9 +3,9 @@ import 'package:site_demo/utils/color_assets.dart';
 
 class ExperinceContanier extends StatelessWidget {
   const ExperinceContanier({
-    Key key,
-    @required this.experince,
-    @required this.index,
+    Key? key,
+    required this.experince,
+    required this.index,
   }) : super(key: key);
 
   final ExperienceInfo experince;
@@ -49,7 +49,7 @@ class ExperinceContanier extends StatelessWidget {
   }
 }
 
-TextStyle textStyle({bool isBold, bool isGrey}) {
+TextStyle textStyle({bool? isBold, bool? isGrey}) {
   return TextStyle(
     height: 1.3,
     fontSize: 20,
@@ -63,43 +63,50 @@ class ExperienceInfo {
   final String timeLine;
   final List<String> description;
   ExperienceInfo({
-    @required this.company,
-    @required this.timeLine,
-    @required this.description,
+    required this.company,
+    required this.timeLine,
+    required this.description,
   });
 }
 
 final experinceList = [
   ExperienceInfo(
-      company: 'DigiKala',
-      timeLine: 'June 2019- April 2021',
+      company: 'University of Birjand',
+      timeLine: 'septamber 2017- septamber 2021',
       description: [
-        '- Very Nice',
-        '- It was good as a work experience in a large environment. But you have to be a strong programmer to grow in this environment',
-        '- very Money'
+        '- Bachelor of Computer Engineering (Software)',
+        '- Projects I did at university:',
+        '  - Game design in the terminal with C++ language',
+        '  - Analysis and design of the appointment reservation system in the medical clinic',
+        '  - Multiply two 5-digit numbers together with assembly language + a few small projects',
+        '  - Final project: Sweet shop app design',
+        '- Peresent:',
+        '  - Fedora OS',
+        '  - Deepfake',
+        '  - Security in medical systems',
       ]),
-  ExperienceInfo(
-      company: 'Viranika',
-      timeLine: 'March 2018 - April 2018 ',
-      description: [
-        '- not to bad',
-        '- Not security',
-        '- First work experience in an office and team work environment.'
-      ]),
-  ExperienceInfo(
-      company: 'Bazar',
-      timeLine: ' April 2018 - April 2019 ',
-      description: [
-        '- Having a fresh environment for work. motivating',
-        '- very quiet',
-        '- Teamwork, having different people in the workplace and having enough mastery to stay in the company'
-      ]),
-  ExperienceInfo(
-      company: 'Google',
-      timeLine: 'April 2019 - June 2019 ',
-      description: [
-        '- Great working environment, long working hours',
-        '- Hard and tedious projects, so having enough knowledge to do the project is necessary and useful',
-        '- USA'
-      ]),
+  // ExperienceInfo(
+  //     company: 'Viranika',
+  //     timeLine: 'March 2018 - April 2018 ',
+  //     description: [
+  //       '- not to bad',
+  //       '- Not security',
+  //       '- First work experience in an office and team work environment.'
+  //     ]),
+  // ExperienceInfo(
+  //     company: 'Bazar',
+  //     timeLine: ' April 2018 - April 2019 ',
+  //     description: [
+  //       '- Having a fresh environment for work. motivating',
+  //       '- very quiet',
+  //       '- Teamwork, having different people in the workplace and having enough mastery to stay in the company'
+  //     ]),
+  // ExperienceInfo(
+  //     company: 'Google',
+  //     timeLine: 'April 2019 - June 2019 ',
+  //     description: [
+  //       '- Great working environment, long working hours',
+  //       '- Hard and tedious projects, so having enough knowledge to do the project is necessary and useful',
+  //       '- USA'
+  //     ]),
 ];

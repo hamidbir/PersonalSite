@@ -10,7 +10,7 @@ bool isAnimating = false;
 
 class HeaderView extends StatelessWidget {
   const HeaderView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class HeaderView extends StatelessWidget {
 
 class HeaderDesktopView extends StatefulWidget {
   const HeaderDesktopView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -54,7 +54,7 @@ class _HeaderDesktopViewState extends State<HeaderDesktopView> {
                       _animateTo("Hello");
                     },
                     child: FlareActor(
-                      'images/main7.flr',
+                      'images/main.flr',
                       animation: currentAnimation,
                       callback: (string) {
                         isAnimating = true;
@@ -65,7 +65,13 @@ class _HeaderDesktopViewState extends State<HeaderDesktopView> {
                       right: 0,
                       bottom: 65,
                       child: Container(
-                          width: 100, height: 100, child: CatAnimation())),
+                        color: Colors.blue,
+                        width: 100,
+                        height: 100,
+                        child: CatAnimation(
+                          isMobile: false,
+                        ),
+                      )),
                 ],
               ),
             ),
@@ -99,7 +105,7 @@ class _HeaderDesktopViewState extends State<HeaderDesktopView> {
 
 class HeaderViewMobile extends StatefulWidget {
   const HeaderViewMobile({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -129,7 +135,7 @@ class _HeaderViewMobileState extends State<HeaderViewMobile> {
                     _animateTo("Hello");
                   },
                   child: FlareActor(
-                    'images/main7.flr',
+                    'images/main.flr',
                     animation: currentAnimation,
                     callback: (string) {
                       isAnimating = true;

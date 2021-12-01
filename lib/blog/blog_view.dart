@@ -9,12 +9,12 @@ import 'package:webfeed/webfeed.dart';
 
 class BlogView extends StatelessWidget {
   const BlogView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const String title = 'Blog';
   @override
   Widget build(BuildContext context) {
-    return FutureProvider<List<RssItem>>(
+    return FutureProvider<List<RssItem>?>(
         create: (_) => getArticle(),
         initialData: null,
         child: MobileDesktopViewBuilder(
@@ -62,9 +62,9 @@ Future<List<RssItem>> getArticle() async {
   final response = await http.get(Uri.parse(url));
   final parseresponse = RssFeed.parse(response.body);
   final haveFlutterTag = (RssItem article) {
-    return article.categories.any((category) => category.value == 'Flutter');
+    return article.categories!.any((category) => category.value == 'Flutter');
   };
   final flutterArticleList =
-      parseresponse.items.where(haveFlutterTag).take(2).toList();
+      parseresponse.items!.where(haveFlutterTag).take(2).toList();
   return flutterArticleList;
 }

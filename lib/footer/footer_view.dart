@@ -115,8 +115,8 @@ class SocialsInfo {
   final Widget icon;
   final String url;
   SocialsInfo({
-    @required this.icon,
-    @required this.url,
+    required this.icon,
+    required this.url,
   });
 }
 
@@ -129,5 +129,5 @@ final socials = [
       url: 'https://twitter.com/Hamid70859844'),
   SocialsInfo(
       icon: FaIcon(FontAwesomeIcons.linkedin),
-      url: 'https://www.linkedin.com/in/hamid-r-b42708179/'),
+      url: 'https://www.linkedin.com/in/hamid-ravanbod/'),
 ];

@@ -6,7 +6,7 @@ import 'package:site_demo/skills/outlined_Skills_view.dart';
 
 class SkillsView extends StatelessWidget {
   const SkillsView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Skills';
   @override
@@ -22,7 +22,7 @@ class SkillsView extends StatelessWidget {
 
 class SkillsDesktopView extends StatelessWidget {
   const SkillsDesktopView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -56,7 +56,7 @@ class SkillsDesktopView extends StatelessWidget {
 
 class SkillsMobileView extends StatelessWidget {
   const SkillsMobileView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -80,9 +80,7 @@ final skills = [
   'Flutter',
   'Firebase',
   'UI Design',
-  'C++',
-  'Go',
-  'DataBase',
-  'MySQL',
-  'Pyhton',
+  'Firestore',
+  'GetX',
+  'BLoC',
 ];
