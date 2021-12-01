@@ -1,6 +1,6 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 import 'package:site_demo/drawer/drawer_view.dart';
 import 'package:site_demo/experience/experience_view.dart';
 import 'package:site_demo/footer/footer_view.dart';
@@ -42,38 +42,26 @@ class _HomeViewState extends State<HomeView> with AfterLayoutMixin {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     //* Implement inheritance from a segment for cascading controller availability in the segments
-    return MultiProvider(
-      providers: [
-        ProxyProvider0<List<NavigationItem>>(
-          update: (_, __) {
-            return navigationItems;
-          },
-        ),
-        ChangeNotifierProvider<ScrollController>(create: (_) {
-          return scrollController;
-        })
-      ],
-      child: Scaffold(
-        endDrawer: DrawerView(),
-        body: SizedBox(
-          width: width,
-          child: SingleChildScrollView(
-            controller: scrollController,
-            child: Column(
-              children: [
-                NavigationBarView(),
-                HeaderView(),
-                ProjectView(key: projectKey),
-                SkillsView(key: skillsKey),
-                ExperienceView(key: experienceKey),
-                //BlogView(),
-                FooterView()
-              ],
-            ),
+    return Scaffold(
+      //endDrawer: DrawerView(),
+      body: SizedBox(
+        width: width,
+        child: SingleChildScrollView(
+          //  controller: scrollController,
+          child: Column(
+            children: [
+              NavigationBarView(),
+              HeaderView(),
+              ProjectView(key: projectKey),
+              SkillsView(key: skillsKey),
+              ExperienceView(key: experienceKey),
+              //BlogView(),
+              FooterView()
+            ],
           ),
         ),
-        floatingActionButton: BackToTop(),
       ),
+      //floatingActionButton: BackToTop(),
     );
   }
 }

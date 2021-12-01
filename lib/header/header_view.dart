@@ -42,39 +42,40 @@ class _HeaderDesktopViewState extends State<HeaderDesktopView> {
             Expanded(
               child: HeaderBody(),
             ),
-            Expanded(
-              child: Stack(
-                children: [
-                  InkWell(
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
-                    onTap: () {
-                      _animateTo("Hello");
-                    },
-                    child: FlareActor(
-                      'images/main.flr',
-                      animation: currentAnimation,
-                      callback: (string) {
-                        isAnimating = true;
-                      },
-                    ),
-                  ),
-                  Positioned(
-                      right: 0,
-                      bottom: 65,
-                      child: Container(
-                        color: Colors.blue,
-                        width: 100,
-                        height: 100,
-                        child: CatAnimation(
-                          isMobile: false,
-                        ),
-                      )),
-                ],
-              ),
-            ),
+            Expanded(child: Image.asset('images/profile.jpg')
+                // child: Stack(
+                //   children: [
+                //     InkWell(
+                //       focusColor: Colors.transparent,
+                //       hoverColor: Colors.transparent,
+                //       highlightColor: Colors.transparent,
+                //       splashColor: Colors.transparent,
+                //       onTap: () {
+                //         _animateTo("Hello");
+                //       },
+                //       child: FlareActor(
+                //         'images/main.flr',
+                //         animation: currentAnimation,
+                //         callback: (string) {
+                //           isAnimating = true;
+                //         },
+                //       ),
+                //     ),
+                //     Positioned(
+                //         right: 0,
+                //         bottom: 65,
+                //         child: Container(
+                //           color: Colors.blue,
+                //           width: 100,
+                //           height: 100,
+                //           child: CatAnimation(
+                //             isMobile: false,
+                //           ),
+                //         )),
+                //   ],
+                // ),
+
+                ),
           ],
         ),
       ),
@@ -123,35 +124,36 @@ class _HeaderViewMobileState extends State<HeaderViewMobile> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: Column(
         children: [
-          Expanded(
-            child: Stack(
-              children: [
-                InkWell(
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  onTap: () {
-                    _animateTo("Hello");
-                  },
-                  child: FlareActor(
-                    'images/main.flr',
-                    animation: currentAnimation,
-                    callback: (string) {
-                      isAnimating = true;
-                    },
-                  ),
-                ),
-                Positioned(
-                    right: 45,
-                    bottom: 0,
-                    child: Container(
-                        width: 50,
-                        height: 50,
-                        child: CatAnimation(isMobile: true))),
-              ],
-            ),
-          ),
+          Expanded(child: Image.asset('images/profile.jpg')
+              // child: Stack(
+              //   children: [
+              //     InkWell(
+              //       focusColor: Colors.transparent,
+              //       hoverColor: Colors.transparent,
+              //       highlightColor: Colors.transparent,
+              //       splashColor: Colors.transparent,
+              //       onTap: () {
+              //         _animateTo("Hello");
+              //       },
+              //       child: FlareActor(
+              //         'images/main.flr',
+              //         animation: currentAnimation,
+              //         callback: (string) {
+              //           isAnimating = true;
+              //         },
+              //       ),
+              //     ),
+              //     Positioned(
+              //         right: 45,
+              //         bottom: 0,
+              //         child: Container(
+              //             width: 50,
+              //             height: 50,
+              //             child: CatAnimation(isMobile: true))),
+              //   ],
+              // ),
+
+              ),
           HeaderBody(
             isMobile: true,
           ),

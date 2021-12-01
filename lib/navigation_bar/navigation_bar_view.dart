@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:site_demo/components/mobile_desktop_view_builder.dart';
 import 'package:site_demo/constants.dart';
 import 'package:site_demo/home/home_view.dart';
@@ -20,10 +19,10 @@ class NavigationDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final navigationItems = context.watch<List<NavigationItem>>();
-    final scrollController = context.watch<ScrollController>();
+    // final navigationItems = context.watch<List<NavigationItem>>();
+    // final scrollController = context.watch<ScrollController>();
     return Container(
-      height: 100,
+      height: 50,
       width: 1092,
       padding: kScreenPadding,
       child: Row(
@@ -33,14 +32,14 @@ class NavigationDesktopView extends StatelessWidget {
             height: 44.0,
           ),
           Spacer(),
-          for (var item in navigationItems)
-            NavigationBarItem(
-                onPressed: () {
-                  scrollController.animateTo(item.position,
-                      duration: Duration(milliseconds: 700),
-                      curve: Curves.easeInOut);
-                },
-                data: item.text),
+          // for (var item in navigationItems)
+          //   NavigationBarItem(
+          //       onPressed: () {
+          //         scrollController.animateTo(item.position,
+          //             duration: Duration(milliseconds: 700),
+          //             curve: Curves.easeInOut);
+          //       },
+          //       data: item.text),
         ],
       ),
     );

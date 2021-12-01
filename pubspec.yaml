@@ -30,7 +30,7 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   google_fonts: ^2.1.0
   peanut: ^4.1.1
-  provider: ^6.0.1
+  #provider: ^6.0.1
   responsive_builder: ^0.4.1
   url_launcher: ^6.0.17
   webfeed: ^0.7.0
@@ -54,6 +54,7 @@ flutter:
     - images/p1.png
     - images/p2.jpg
     - images/p3.png
+    - images/profile.jpg
     - images/main7.flr
     - images/main.flr
     - images/main1.flr
